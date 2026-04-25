@@ -45,11 +45,13 @@ neelwafurat-scraper/
 └── README.md           # Documentation
 ---
 
-##⚙️ Installation & Usage
-Clone the repo:
+---
 
-Bash
-git clone [https://github.com/YOUR_USERNAME/neelwafurat-data-pipeline.git](https://github.com/YOUR_USERNAME/neelwafurat-data-pipeline.git)
+## ⚙️ Installation & Usage
+
+1. **Clone the repo:**
+```bash
+git clone https://github.com/YOUR_USERNAME/neelwafurat-data-pipeline.git
 Install requirements:
 
 Bash
@@ -58,11 +60,3 @@ Run the pipeline:
 
 Bash
 python src/scraper.py
-
----
-##📈 Future Roadmap
-[ ] Build a Power BI / Tableau Dashboard to visualize pricing trends.
-
-[ ] Implement Automatic Email Alerts when new books from specific publishers are added.
-
-[ ] Deploy the script using GitHub Actions for scheduled weekly scrapes.
