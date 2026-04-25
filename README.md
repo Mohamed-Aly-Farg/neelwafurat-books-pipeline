@@ -44,19 +44,5 @@ neelwafurat-scraper/
 ├── requirements.txt    # Library dependencies
 └── README.md           # Documentation
 ---
-
----
-
-## ⚙️ Installation & Usage
-
-1. **Clone the repo:**
-```bash
-git clone https://github.com/YOUR_USERNAME/neelwafurat-data-pipeline.git
-Install requirements:
-
-Bash
-pip install -r requirements.txt
-Run the pipeline:
-
 Bash
 python src/scraper.py
