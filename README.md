@@ -43,16 +43,14 @@ neelwafurat-scraper/
 ├── .gitignore          # Files to exclude from GitHub
 ├── requirements.txt    # Library dependencies
 └── README.md           # Documentation
+---
 
-
-
-
-⚙️ Installation & Usage
-Clone the repository:
+##⚙️ Installation & Usage
+Clone the repo:
 
 Bash
-git clone https://github.com/YOUR_USERNAME/neelwafurat-data-pipeline.git
-Install dependencies:
+git clone [https://github.com/YOUR_USERNAME/neelwafurat-data-pipeline.git](https://github.com/YOUR_USERNAME/neelwafurat-data-pipeline.git)
+Install requirements:
 
 Bash
 pip install -r requirements.txt
@@ -60,7 +58,9 @@ Run the pipeline:
 
 Bash
 python src/scraper.py
-📈 Future Roadmap
+
+---
+##📈 Future Roadmap
 [ ] Build a Power BI / Tableau Dashboard to visualize pricing trends.
 
 [ ] Implement Automatic Email Alerts when new books from specific publishers are added.
