@@ -1,42 +1,52 @@
-📚 Neelwafurat Bookstore: Automated Data Pipeline & Market Scraper
+# 📚 Neelwafurat Bookstore: Automated Data Pipeline
+> **Automated Web Scraping, Data Cleaning, and SQL Integration.**
 
-🌟 Project Overview
-This project is a high-performance Web Scraping and Data Engineering pipeline designed to extract, process, and store book data from Neelwafurat, one of the leading Arabic online bookstores.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 
-Moving beyond simple data collection, this pipeline automates the transition from unstructured web data to a structured SQL database, enabling immediate market analysis, pricing strategy evaluation, and inventory tracking.
+---
 
-🛠️ Tech Stack
-Python 3.x: Core logic and automation.
+## 🌟 Project Overview
+This project is a high-performance **Data Engineering pipeline** designed to extract, process, and store book data from **Neelwafurat**. It automates the transition from **unstructured web data** to a **structured SQL database**, enabling immediate market analysis and pricing strategy evaluation.
 
-BeautifulSoup4 & Requests: Advanced web scraping with custom headers and rate-limiting.
+---
 
-Pandas: Data cleaning, transformation, and numerical processing.
+## 🛠️ Tech Stack & Tools
 
-Regular Expressions (Regex): Precise extraction of pricing data from messy strings.
+| Tool | Purpose |
+| :--- | :--- |
+| **BeautifulSoup4** | Advanced HTML parsing and data extraction. |
+| **Requests** | Handling HTTP requests with custom Headers & Delays. |
+| **Pandas** | Data cleaning, transformation, and numerical processing. |
+| **Regex** | Extracting numeric prices from complex Arabic strings. |
+| **SQLite** | Relational database storage for persistent data. |
 
-SQLite: Relational database storage for persistent data management.
+---
 
-🚀 Key Features
-Ethical Scraping: Integrated User-Agent rotation and time.sleep delays to respect server limits.
+## 🚀 Key Features
 
-Robust Error Handling: Implemented try-except blocks to ensure the pipeline continues even if specific data points are missing.
+* **🛡️ Ethical Scraping:** Integrated `User-Agent` rotation and `time.sleep` to respect server limits.
+* **⚠️ Robust Error Handling:** `try-except` blocks to ensure the pipeline survives missing data.
+* **🧹 Automated Cleaning:** * Converts price strings (e.g., "15.00 ج.م") into `float` values.
+    * Handles missing values with logical "N/A" defaults.
+* **💾 Dual Storage:** Saves data as both **CSV** (for Excel) and **SQLite** (for Databases).
 
-Automated Data Cleaning:
+---
 
-Converted localized price strings (e.g., "15.00 ج.م") into searchable numeric formats (float).
+## 📂 Project Structure
 
-Handled missing values by assigning logical defaults or "N/A" tags.
-
-Dual-Format Storage: Saves data simultaneously to a clean CSV for quick Excel viewing and an SQLite Database for professional-grade querying.
-
-📂 Project Structure
-Plaintext
+```text
 neelwafurat-scraper/
-├── data/               # Stores generated CSV and SQLite (.db) files
-├── src/                # Contains the main engine (scraper.py)
-├── .gitignore          # Prevents unnecessary files from being uploaded
-├── requirements.txt    # List of all Python libraries needed
-└── README.md           # Project documentation
+├── data/               # CSV and SQLite (.db) output files
+├── src/                # Python engine (scraper.py)
+├── .gitignore          # Files to exclude from GitHub
+├── requirements.txt    # Library dependencies
+└── README.md           # Documentation
+
+
+
+
 ⚙️ Installation & Usage
 Clone the repository:
 
