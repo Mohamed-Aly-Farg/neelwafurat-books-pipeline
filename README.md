@@ -1,48 +1,40 @@
-# 📚 Neelwafurat Bookstore: Automated Data Pipeline
-> **Automated Web Scraping, Data Cleaning, and SQL Integration.**
+# 📚 Neelwafurat Books Pipeline
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+A high-performance, automated **Data Engineering and Web Scraping pipeline** designed to extract, process, clean, and store structured book data from Neelwafurat, one of the leading Arabic online bookstores.
 
 ---
 
-## 🌟 Project Overview
-This project is a high-performance **Data Engineering pipeline** designed to extract, process, and store book data from **Neelwafurat**. It automates the transition from **unstructured web data** to a **structured SQL database**, enabling immediate market analysis and pricing strategy evaluation.
+## 🚀 Project Overview
 
----
+In the data landscape, acquiring clean and well-structured datasets is often the biggest challenge. This project solves that by building an end-to-end Python pipeline that automates data collection from a live e-commerce platform. It transforms unstructured web data into a clean, relational-ready format, making it perfect for downstream data analysis, market research, or business intelligence dashboarding.
 
 ## 🛠️ Tech Stack & Tools
 
-| Tool | Purpose |
-| :--- | :--- |
-| **BeautifulSoup4** | Advanced HTML parsing and data extraction. |
-| **Requests** | Handling HTTP requests with custom Headers & Delays. |
-| **Pandas** | Data cleaning, transformation, and numerical processing. |
-| **Regex** | Extracting numeric prices from complex Arabic strings. |
-| **SQLite** | Relational database storage for persistent data. |
+* **Core Language:** Python 3.x
+* **Web Scraping & Parsing:** BeautifulSoup4, Requests
+* **Data Storage:** SQLite (Relational Database)
+* **Development Environment:** VS Code / Jupyter Notebooks
 
----
+## 📌 Key Features
 
-## 🚀 Key Features
+* **Automated Data Extraction:** Efficiently navigates through e-commerce catalog pages to harvest book titles, authors, prices, publishers, and metadata.
+* **Robust Data Cleaning Pipeline:** Implements custom Python scripts to handle missing values, eliminate duplicates, and standardize inconsistent text formatting.
+* **Structured Storage:** Dynamically maps and inserts parsed data into a locally deployed SQLite database with a optimized schema.
+* **Error Handling:** Designed with exception handling to manage connection timeouts and unexpected HTML structure changes gracefully.
 
-* **🛡️ Ethical Scraping:** Integrated `User-Agent` rotation and `time.sleep` to respect server limits.
-* **⚠️ Robust Error Handling:** `try-except` blocks to ensure the pipeline survives missing data.
-* **🧹 Automated Cleaning:** * Converts price strings (e.g., "15.00 ج.م") into `float` values.
-    * Handles missing values with logical "N/A" defaults.
-* **💾 Dual Storage:** Saves data as both **CSV** (for Excel) and **SQLite** (for Databases).
+## 📁 Database Schema
 
----
+The pipeline stores data into a structured table named `books` with the following attributes:
+* `id` (INTEGER, Primary Key)
+* `title` (TEXT) - The title of the book.
+* `author` (TEXT) - The author's name.
+* `price` (REAL) - Normalized book price.
+* `publisher` (TEXT) - Publishing house.
+* `category` (TEXT) - Genre/Category.
 
-## 📂 Project Structure
+## ⚙️ Setup and Installation
 
-```text
-neelwafurat-scraper/
-├── data/               # CSV and SQLite (.db) output files
-├── src/                # Python engine (scraper.py)
-├── .gitignore          # Files to exclude from GitHub
-├── requirements.txt    # Library dependencies
-└── README.md           # Documentation
----
-Bash
-python src/scraper.py
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Mohamed-Aly-Farg/neelwafurat-books-pipeline.git](https://github.com/Mohamed-Aly-Farg/neelwafurat-books-pipeline.git)
+   cd neelwafurat-books-pipeline
